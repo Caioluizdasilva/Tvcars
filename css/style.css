@@ -1729,7 +1729,7 @@ section {
 }
 
 .logo-image {
-    height: 60px;
+    height: 45px;
     width: auto;
     object-fit: contain;
 }
@@ -1850,7 +1850,7 @@ section {
     }
     
     .logo-image {
-        height: 50px;
+        height: 38px;
     }
 }
 
@@ -1875,4 +1875,3 @@ section {
         font-size: 16px;
     }
 }
-
