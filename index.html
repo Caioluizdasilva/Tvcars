@@ -15,11 +15,17 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <span class="logo-text">TV Cars</span>
-                    <span class="logo-subtitle">Nova Friburgo</span>
+                    <a href="#hero">
+                        <img src="img/logi.png" alt="TV Cars Logo" class="logo-image">
+                    </a>
                 </div>
                 <nav class="main-nav">
-                    <ul class="nav-list">
+                    <div class="nav-toggle" id="navToggle">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                    <ul class="nav-list" id="navList">
                         <li><a href="#hero" class="nav-link">Início</a></li>
                         <li><a href="#how-it-works" class="nav-link">Como Funciona</a></li>
                         <li><a href="#benefits" class="nav-link">Benefícios</a></li>
@@ -1004,6 +1010,23 @@
 
     <script src="js/script.js"></script>
     <script>
+        // Mobile menu toggle
+        const navToggle = document.getElementById('navToggle');
+        const navList = document.getElementById('navList');
+
+        navToggle.addEventListener('click', function() {
+            navList.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                navList.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', function(e) {
